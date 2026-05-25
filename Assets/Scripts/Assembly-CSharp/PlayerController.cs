@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -58,7 +59,8 @@ public class PlayerController : MonoBehaviour
 	public enum InputDevice
 	{
 		Touch = 0,
-		XperiaPlay = 1
+		XperiaPlay = 1,
+		PC = 2
 	}
 
 	public class Ability
@@ -118,7 +120,7 @@ public class PlayerController : MonoBehaviour
 		{
 			get
 			{
-				return message;
+				return PlatformDependent.TranslateKeybinds(message);
 			}
 		}
 
@@ -186,7 +188,7 @@ public class PlayerController : MonoBehaviour
 		public void display()
 		{
 			tipBackground.gameObject.SetActiveRecursively(true);
-			((TextMesh)tipBackground.transform.GetChild(0).GetComponent(typeof(TextMesh))).text = message;
+			((TextMesh)tipBackground.transform.GetChild(0).GetComponent(typeof(TextMesh))).text = PlatformDependent.TranslateKeybinds(message);
 		}
 
 		public bool performTipAction()
@@ -4040,8 +4042,8 @@ public class PlayerController : MonoBehaviour
 			if ((bool)grabbedEnemy && grabbedEnemy.GrabbedVictim && !grabbedEnemy.Dead)
 			{
 				grabbedEnemy.GrabbedStopTest();
-				currentGrabbedTarget = null;
 			}
+			currentGrabbedTarget = null;
 		}
 		else if (grabbingEnemy)
 		{
@@ -7608,6 +7610,57 @@ public class PlayerController : MonoBehaviour
 		{
 			StartCoroutine(FadeToBlack());
 		}
+		if (PlatformDependent.IsPC())
+		{
+			inputDevice = InputDevice.PC;
+			if (hud != null)
+			{
+				if (hud.LeftStick != null) hud.LeftStick.gameObject.SetActiveRecursively(false);
+				if (hud.AttackStick != null) hud.AttackStick.gameObject.SetActiveRecursively(false);
+				if (hud.BlockStick != null) hud.BlockStick.gameObject.SetActiveRecursively(false);
+				if (hud.LeftControlPad != null)
+				{
+					Renderer leftControlPadRenderer = hud.LeftControlPad.GetComponent<Renderer>();
+					if (leftControlPadRenderer != null) leftControlPadRenderer.enabled = false;
+				}
+				if (hud.GUI_Thermal != null) hud.GUI_Thermal.SetActiveRecursively(false);
+				if (hud.GUI_Cloak != null) hud.GUI_Cloak.SetActiveRecursively(false);
+				if (hud.GUI_WeaponWristBlades_Active != null) hud.GUI_WeaponWristBlades_Active.SetActiveRecursively(false);
+				if (hud.GUI_WeaponWristBlades_Inactive != null) hud.GUI_WeaponWristBlades_Inactive.SetActiveRecursively(false);
+				if (hud.GUI_WeaponCombiStick_Active != null) hud.GUI_WeaponCombiStick_Active.SetActiveRecursively(false);
+				if (hud.GUI_WeaponCombiStick_Inactive != null) hud.GUI_WeaponCombiStick_Inactive.SetActiveRecursively(false);
+				if (hud.GUI_WeaponWhip_Active != null) hud.GUI_WeaponWhip_Active.SetActiveRecursively(false);
+				if (hud.GUI_WeaponWhip_Inactive != null) hud.GUI_WeaponWhip_Inactive.SetActiveRecursively(false);
+				if (hud.GUI_WeaponPlasmaGun_Active != null) hud.GUI_WeaponPlasmaGun_Active.SetActiveRecursively(false);
+				if (hud.GUI_WeaponPlasmaGun_Inactive != null) hud.GUI_WeaponPlasmaGun_Inactive.SetActiveRecursively(false);
+				if (hud.GUI_WeaponDisc_Active != null) hud.GUI_WeaponDisc_Active.SetActiveRecursively(false);
+				if (hud.GUI_WeaponDisc_Inactive != null) hud.GUI_WeaponDisc_Inactive.SetActiveRecursively(false);
+				if (hud.GUI_WeaponNetGun_Active != null) hud.GUI_WeaponNetGun_Active.SetActiveRecursively(false);
+				if (hud.GUI_WeaponNetGun_Inactive != null) hud.GUI_WeaponNetGun_Inactive.SetActiveRecursively(false);
+				if (hud.buttonPause != null) hud.buttonPause.pollForKey = KeyCode.Escape;
+				if (hud.tipTextures != null)
+				{
+					for (int tipIdx = 0; tipIdx < hud.tipTextures.Length; tipIdx++)
+					{
+						Transform tipNode = hud.tipTextures[tipIdx];
+						if (tipNode == null) continue;
+						Transform ancestor = tipNode.parent;
+						while (ancestor != null)
+						{
+							if (!ancestor.gameObject.activeSelf)
+							{
+								ancestor.gameObject.SetActive(true);
+								Renderer ancestorRenderer = ancestor.GetComponent<Renderer>();
+								if (ancestorRenderer != null) ancestorRenderer.enabled = false;
+							}
+							ancestor = ancestor.parent;
+						}
+					}
+				}
+			}
+			Cursor.visible = true;
+			Cursor.lockState = CursorLockMode.None;
+		}
 	}
 
 	private void SetupCombosText()
@@ -7664,6 +7717,7 @@ public class PlayerController : MonoBehaviour
 			TextMesh gUI_CombosText12 = GUI_CombosText;
 			gUI_CombosText12.text = gUI_CombosText12.text + "\n" + Language.GetTxt("COMBO_WHIP_THE_CHOPPER");
 		}
+		GUI_CombosText.text = PlatformDependent.TranslateKeybinds(GUI_CombosText.text);
 	}
 
 	private IEnumerator FadeToBlack()
@@ -7691,6 +7745,12 @@ public class PlayerController : MonoBehaviour
 		{
 			Time.timeScale = 1f;
 			RestoreMaterialsColors(true);
+			int tutorialSlot = EncryptedPlayerPrefs.GetInt("PR_CurrentSlot");
+			if (tutorialSlot > 0)
+			{
+				int existingUnlocked = EncryptedPlayerPrefs.GetInt("PR_LastMissionUnlocked_S" + tutorialSlot);
+				EncryptedPlayerPrefs.SetInt("PR_LastMissionUnlocked_S" + tutorialSlot, Mathf.Max(1, existingUnlocked));
+			}
 			if (liteVersion)
 			{
 				PlatformDependent.LoadLevelWithLoadingScreen("MainMenu3D_iPad");
@@ -7927,6 +7987,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (inputDevice == InputDevice.XperiaPlay)
 		{
+#if !UNITY_STANDALONE
 			if (AndroidInput.touchCountSecondary > 0)
 			{
 				androidTouch = AndroidInput.GetSecondaryTouch(0);
@@ -7939,10 +8000,9 @@ public class PlayerController : MonoBehaviour
 					lDiff3 = Vector3.zero;
 				}
 			}
-			else
-			{
-				lDiff3 = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
-			}
+#else
+		    lDiff3 = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+#endif
 			moved = lDiff3.sqrMagnitude > 0f;
 			pressedCloak = Input.GetKeyDown(KeyCode.Escape);
 		}
@@ -7953,6 +8013,27 @@ public class PlayerController : MonoBehaviour
 		pressedAttackButtonUp = Input.GetKeyUp("joystick button 1");
 		pressedBlockButtonDown = Input.GetKeyDown("joystick button 0");
 		pressedBlockButtonUp = Input.GetKeyUp("joystick button 0");
+		texture4IsTapped = pressedBlockButtonUp;
+		texture3IsTapped = pressedBlockButtonUp;
+		texture2IsTapped = pressedBlockButtonUp;
+	}
+
+	private void UpdatePC(ref bool pressedAttackButtonDown, ref bool pressedAttackButtonUp, ref bool pressedBlockButtonDown, ref bool pressedBlockButtonUp, ref bool pressedCloak, ref bool pressedMeleeRangeChange, ref bool pressedMeleeWeaponChange, ref bool pressedThermal)
+	{
+		lDiff3 = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+		if (blocking)
+		{
+			lDiff3 = Vector3.zero;
+		}
+		moved = lDiff3.sqrMagnitude > 0f;
+		pressedMeleeWeaponChange = Input.GetKeyDown(KeyCode.Q);
+		pressedMeleeRangeChange = Input.GetKeyDown(KeyCode.E);
+		pressedThermal = Input.GetKeyDown(KeyCode.F);
+		pressedCloak = Input.GetKeyDown(KeyCode.C);
+		pressedAttackButtonDown = Input.GetMouseButtonDown(0);
+		pressedAttackButtonUp = Input.GetMouseButtonUp(0);
+		pressedBlockButtonDown = Input.GetMouseButtonDown(1);
+		pressedBlockButtonUp = Input.GetMouseButtonUp(1);
 		texture4IsTapped = pressedBlockButtonUp;
 		texture3IsTapped = pressedBlockButtonUp;
 		texture2IsTapped = pressedBlockButtonUp;
@@ -8295,8 +8376,15 @@ public class PlayerController : MonoBehaviour
 			bool pressedAttackButtonUp = false;
 			bool pressedBlockButtonDown = false;
 			bool pressedBlockButtonUp = false;
-			UpdateXperia(ref pressedAttackButtonDown, ref pressedAttackButtonUp, ref pressedBlockButtonDown, ref pressedBlockButtonUp, ref pressedCloak, ref pressedMeleeRangeChange, ref pressedMeleeWeaponChange, ref pressedThermal);
-			UpdateTouch(ref pressedAttackButtonDown, ref pressedAttackButtonUp, ref pressedBlockButtonDown, ref pressedBlockButtonUp, ref pressedCloak, ref pressedMeleeRangeChange, ref pressedMeleeWeaponChange, ref pressedThermal);
+			if (inputDevice == InputDevice.PC)
+			{
+				UpdatePC(ref pressedAttackButtonDown, ref pressedAttackButtonUp, ref pressedBlockButtonDown, ref pressedBlockButtonUp, ref pressedCloak, ref pressedMeleeRangeChange, ref pressedMeleeWeaponChange, ref pressedThermal);
+			}
+			else
+			{
+				UpdateXperia(ref pressedAttackButtonDown, ref pressedAttackButtonUp, ref pressedBlockButtonDown, ref pressedBlockButtonUp, ref pressedCloak, ref pressedMeleeRangeChange, ref pressedMeleeWeaponChange, ref pressedThermal);
+				UpdateTouch(ref pressedAttackButtonDown, ref pressedAttackButtonUp, ref pressedBlockButtonDown, ref pressedBlockButtonUp, ref pressedCloak, ref pressedMeleeRangeChange, ref pressedMeleeWeaponChange, ref pressedThermal);
+			}
 			lDiff3.Normalize();
 			if (isControllable)
 			{
@@ -8403,7 +8491,7 @@ public class PlayerController : MonoBehaviour
 	{
 		Dictionary<string, string> dictionary = new Dictionary<string, string>();
 		dictionary.Add("LEVEL", currentMission.ToString());
-		FlurryManager.Instance.LogEvent("RETRY", dictionary);
+		//FlurryManager.Instance.LogEvent("RETRY", dictionary);
 	}
 
 	private void ThermalButtonPressed()

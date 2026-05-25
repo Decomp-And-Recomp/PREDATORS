@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public static class PlatformDependent
@@ -33,6 +34,38 @@ public static class PlatformDependent
 	{
 		Debug.Log("screen width: " + (float)Screen.width / Screen.dpi);
 		return (float)Screen.width / Screen.dpi > 4f;
+	}
+
+	public static bool IsPC()
+	{
+		RuntimePlatform p = Application.platform;
+		return p == RuntimePlatform.WindowsPlayer || p == RuntimePlatform.OSXPlayer || p == RuntimePlatform.LinuxPlayer || p == RuntimePlatform.WindowsEditor || p == RuntimePlatform.OSXEditor || p == RuntimePlatform.LinuxEditor;
+	}
+
+	public static string TranslateKeybinds(string text)
+	{
+		if (!IsPC() || string.IsNullOrEmpty(text))
+		{
+			return text;
+		}
+		text = Regex.Replace(text, @"\bthe\s+ranged\s+weapon[,\s]+key\s*2\b", "E", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+ranged\s+weapon\s+icon\b", "E", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+ranged\s+weapon\s+slot\b", "E", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+ranged\s+weapon\b", "E", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+melee\s+weapon\s+slot\b", "Q", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+melee\s+weapon\s+icon\b", "Q", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+melee\s+weapon\b", "Q", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bthe\s+left\s+stick\b", "WASD", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bleft\s+stick\b", "WASD", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bbutton\s+A\b", "LMB", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bbutton\s+B\b", "RMB", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bbutton\s+T\b", "F", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bDash\s+Jump\b", "Hold RMB+WASD", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bDash\b", "Hold RMB+WASD", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bMove\b", "WASD", RegexOptions.IgnoreCase);
+		text = Regex.Replace(text, @"\bA\b", "LMB");
+		text = Regex.Replace(text, @"\bB\b", "RMB");
+		return text;
 	}
 
 	public static void LoadLevelWithLoadingScreen(string aLevelName)

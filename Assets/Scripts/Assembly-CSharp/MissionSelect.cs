@@ -612,7 +612,7 @@ public class MissionSelect : MonoBehaviour
 		availableHonorPoints = num;
 		honorPointsAvailableMesh.text = num.ToString();
 		trophyRoomText.text = Language.GetTxt("HONOR_POINTS") + "\n" + availableHonorPoints;
-		FlurryManager.Instance.LogEvent("IAP_PURCHASE", dictionary);
+		//FlurryManager.Instance.LogEvent("IAP_PURCHASE", dictionary);
 		StartCoroutine(DelayedHidePurchasePlane(3f));
 	}
 
@@ -1233,7 +1233,7 @@ public class MissionSelect : MonoBehaviour
 		Dictionary<string, string> dictionary = new Dictionary<string, string>();
 		dictionary.Add("LEVEL_NR", (selectedMission + 1).ToString());
 		dictionary.Add("SLOT", slot.ToString());
-		FlurryManager.Instance.LogEvent("LEVEL_START", dictionary);
+		//FlurryManager.Instance.LogEvent("LEVEL_START", dictionary);
 	}
 
 	private void MissionSquarePressed(int index)
@@ -2239,7 +2239,7 @@ public class MissionSelect : MonoBehaviour
 		dictionary.Add("SLOT", slot.ToString());
 		dictionary.Add("EQUIPMENT", gearsOnTheWall[goodIndex].Name);
 		dictionary.Add("LEVEL", gearsOnTheWall[goodIndex].Level.ToString());
-		FlurryManager.Instance.LogEvent("UPGRADE", dictionary);
+		//FlurryManager.Instance.LogEvent("UPGRADE", dictionary);
 	}
 
 	private void updateHPTexts()

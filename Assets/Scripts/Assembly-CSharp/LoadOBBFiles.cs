@@ -18,8 +18,7 @@ public class LoadOBBFiles : MonoBehaviour
     private void Start()
     {
 #if UNITY_EDITOR || UNITY_STANDALONE
-        MonoBehaviour.print("PC/Editor detected: Bypassing OBB integration entirely.");
-        PlatformDependent.LoadLevelWithLoadingScreen("MainMenu3D_iPad");
+        MonoBehaviour.print("PC/Editor: OBB integration skipped (SplashScreen owns boot transition).");
 #else
         VerifyAndIntegrateOBBFiles();
 #endif
@@ -142,8 +141,10 @@ public class LoadOBBFiles : MonoBehaviour
     private IEnumerator PlayMovieCR()
     {
         yield return null;
+#if !UNITY_STANDALONE
         Handheld.PlayFullScreenMovie("SplashVid.m4v", Color.black, FullScreenMovieControlMode.CancelOnInput);
         yield return new WaitForSeconds(0.2f);
         PlatformDependent.LoadLevelWithLoadingScreen("MainMenu3D_iPad");
+#endif
     }
 }

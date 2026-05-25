@@ -49,18 +49,21 @@ public class EncryptedPlayerPrefs
 	{
 		PlayerPrefs.SetInt(key, value);
 		SaveEncryption(key, "int", value.ToString());
+		PlayerPrefs.Save();
 	}
 
 	public static void SetFloat(string key, float value)
 	{
 		PlayerPrefs.SetFloat(key, value);
 		SaveEncryption(key, "float", Mathf.Floor(value * 1000f).ToString());
+		PlayerPrefs.Save();
 	}
 
 	public static void SetString(string key, string value)
 	{
 		PlayerPrefs.SetString(key, value);
 		SaveEncryption(key, "string", value);
+		PlayerPrefs.Save();
 	}
 
 	public static int GetInt(string key)

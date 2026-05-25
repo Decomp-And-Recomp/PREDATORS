@@ -921,7 +921,7 @@ public class MainMenuPredator : MonoBehaviour
 			buttonQuit.transform.parent.gameObject.SetActiveRecursively(true);
 			if (showContinueButton)
 			{
-				mainMenuNewGameButton.gameObject.SetActiveRecursively(false);
+				mainMenuNewGameButton.gameObject.SetActiveRecursively(true);
 			}
 			else
 			{
@@ -1062,7 +1062,7 @@ public class MainMenuPredator : MonoBehaviour
 		if (showContinueButton)
 		{
 			mainMenuContinueButton.gameObject.SetActiveRecursively(true);
-			mainMenuNewGameButton.gameObject.SetActiveRecursively(false);
+			mainMenuNewGameButton.gameObject.SetActiveRecursively(true);
 			yield return StartCoroutine(SlidePanelVertical(mainMenuSlidePanel, mainMenuPanelStartTransform.localPosition, mainMenuPanelEndTransform.localPosition, slideMenuTime));
 		}
 		else
@@ -1150,7 +1150,7 @@ public class MainMenuPredator : MonoBehaviour
 							if (showContinueButton)
 							{
 								mainMenuContinueButton.gameObject.SetActiveRecursively(true);
-								mainMenuNewGameButton.gameObject.SetActiveRecursively(false);
+								mainMenuNewGameButton.gameObject.SetActiveRecursively(true);
 								yield return StartCoroutine(SlidePanelVertical(mainMenuSlidePanel, mainMenuPanelStartTransform.localPosition, mainMenuPanelEndTransform.localPosition, slideMenuTime));
 							}
 							else
@@ -1380,23 +1380,7 @@ public class MainMenuPredator : MonoBehaviour
 									EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 1);
 								}
 							}
-							else if (maxMissionUnlockedForSlot1 == 0)
-							{
-								ResetPlayerPrefsForNewGame(1);
-								OverwriteSlot1.gameObject.SetActiveRecursively(false);
-								OverwriteSlot2.gameObject.SetActiveRecursively(false);
-								OverwriteSlot3.gameObject.SetActiveRecursively(false);
-								OverwriteSlot4.gameObject.SetActiveRecursively(false);
-								overwritingSlot1 = false;
-								overwritingSlot2 = false;
-								overwritingSlot3 = false;
-								overwritingSlot4 = false;
-								currentMenuState = MenuState.StoryMenu;
-								storySlideIndex = 0;
-								SlotSelectGroup.gameObject.SetActiveRecursively(false);
-								StoryGroup.gameObject.SetActiveRecursively(true);
-							}
-							else
+							else if (maxMissionUnlockedForSlot1 != 0)
 							{
 								EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 1);
 								LoadMissionSelect();
@@ -1467,23 +1451,7 @@ public class MainMenuPredator : MonoBehaviour
 									EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 2);
 								}
 							}
-							else if (maxMissionUnlockedForSlot2 == 0)
-							{
-								ResetPlayerPrefsForNewGame(2);
-								OverwriteSlot1.gameObject.SetActiveRecursively(false);
-								OverwriteSlot2.gameObject.SetActiveRecursively(false);
-								OverwriteSlot3.gameObject.SetActiveRecursively(false);
-								OverwriteSlot4.gameObject.SetActiveRecursively(false);
-								overwritingSlot1 = false;
-								overwritingSlot2 = false;
-								overwritingSlot3 = false;
-								overwritingSlot4 = false;
-								currentMenuState = MenuState.StoryMenu;
-								storySlideIndex = 0;
-								SlotSelectGroup.gameObject.SetActiveRecursively(false);
-								StoryGroup.gameObject.SetActiveRecursively(true);
-							}
-							else
+							else if (maxMissionUnlockedForSlot2 != 0)
 							{
 								EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 2);
 								LoadMissionSelect();
@@ -1554,23 +1522,7 @@ public class MainMenuPredator : MonoBehaviour
 									EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 3);
 								}
 							}
-							else if (maxMissionUnlockedForSlot3 == 0)
-							{
-								ResetPlayerPrefsForNewGame(3);
-								OverwriteSlot1.gameObject.SetActiveRecursively(false);
-								OverwriteSlot2.gameObject.SetActiveRecursively(false);
-								OverwriteSlot3.gameObject.SetActiveRecursively(false);
-								OverwriteSlot4.gameObject.SetActiveRecursively(false);
-								overwritingSlot1 = false;
-								overwritingSlot2 = false;
-								overwritingSlot3 = false;
-								overwritingSlot4 = false;
-								currentMenuState = MenuState.StoryMenu;
-								storySlideIndex = 0;
-								SlotSelectGroup.gameObject.SetActiveRecursively(false);
-								StoryGroup.gameObject.SetActiveRecursively(true);
-							}
-							else
+							else if (maxMissionUnlockedForSlot3 != 0)
 							{
 								EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 3);
 								LoadMissionSelect();
@@ -1643,22 +1595,7 @@ public class MainMenuPredator : MonoBehaviour
 								StoryGroup.gameObject.SetActiveRecursively(true);
 								EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 4);
 							}
-							else if (maxMissionUnlockedForSlot4 == 0)
-							{
-								OverwriteSlot1.gameObject.SetActiveRecursively(false);
-								OverwriteSlot2.gameObject.SetActiveRecursively(false);
-								OverwriteSlot3.gameObject.SetActiveRecursively(false);
-								OverwriteSlot4.gameObject.SetActiveRecursively(false);
-								overwritingSlot1 = false;
-								overwritingSlot2 = false;
-								overwritingSlot3 = false;
-								overwritingSlot4 = false;
-								currentMenuState = MenuState.StoryMenu;
-								storySlideIndex = 0;
-								SlotSelectGroup.gameObject.SetActiveRecursively(false);
-								StoryGroup.gameObject.SetActiveRecursively(true);
-							}
-							else
+							else if (maxMissionUnlockedForSlot4 != 0)
 							{
 								EncryptedPlayerPrefs.SetInt("PR_CurrentSlot", 4);
 								LoadMissionSelect();
@@ -2186,7 +2123,7 @@ public class MainMenuPredator : MonoBehaviour
 		if (showContinueButton)
 		{
 			mainMenuContinueButton.gameObject.SetActiveRecursively(true);
-			mainMenuNewGameButton.gameObject.SetActiveRecursively(false);
+			mainMenuNewGameButton.gameObject.SetActiveRecursively(true);
 			yield return StartCoroutine(SlidePanelVertical(mainMenuSlidePanel, mainMenuPanelStartTransform.localPosition, mainMenuPanelEndTransform.localPosition, slideMenuTime));
 		}
 		else
@@ -2260,7 +2197,7 @@ public class MainMenuPredator : MonoBehaviour
 		if (showContinueButton)
 		{
 			mainMenuContinueButton.gameObject.SetActiveRecursively(true);
-			mainMenuNewGameButton.gameObject.SetActiveRecursively(false);
+			mainMenuNewGameButton.gameObject.SetActiveRecursively(true);
 			yield return StartCoroutine(SlidePanelVertical(mainMenuSlidePanel, mainMenuPanelStartTransform.localPosition, mainMenuPanelEndTransform.localPosition, slideMenuTime));
 		}
 		else

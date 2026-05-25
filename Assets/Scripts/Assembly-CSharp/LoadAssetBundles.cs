@@ -172,7 +172,9 @@ public class LoadAssetBundles : MonoBehaviour
 	private IEnumerator PlayMovieCR()
 	{
 		yield return null;
+#if !UNITY_STANDALONE
 		Handheld.PlayFullScreenMovie("SplashVid.m4v", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		PlatformDependent.LoadLevelWithLoadingScreen("MainMenu3D_iPad");
+#endif
 	}
 }
