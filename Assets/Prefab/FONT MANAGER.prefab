@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1751566337861058}
+  m_IsPrefabParent: 1
+--- !u!1 &1751566337861058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4679679330553636}
+  - component: {fileID: 114891162997376526}
+  m_Layer: 0
+  m_Name: FONT MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4679679330553636
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1751566337861058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114891162997376526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1751566337861058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e690dbc03880a1ade4d49a6047561f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  supportedLanguages: 0a0000000e000000150000000f000000220000001700000016000000
+  correspondingFonts:
+  - {fileID: 12800000, guid: d98761028d3a0124e8a6a1c6eee087f6, type: 2}
+  - {fileID: 12800000, guid: d98761028d3a0124e8a6a1c6eee087f6, type: 2}
+  - {fileID: 12800000, guid: d98761028d3a0124e8a6a1c6eee087f6, type: 2}
+  - {fileID: 12800000, guid: d98761028d3a0124e8a6a1c6eee087f6, type: 2}
+  - {fileID: 12800000, guid: d98761028d3a0124e8a6a1c6eee087f6, type: 2}
+  - {fileID: 12800000, guid: a90f4bb5771f8eb48b736cb64d52a6b3, type: 2}
+  - {fileID: 12800000, guid: 338d16b248872cc458a7f86d347064c3, type: 2}
+  correspondingCharSizes:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1.11
+  - 2.1
+  correspoindingYTransforms:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 1.23
+  - 0.82
+  correspondingMaterials:
+  - {fileID: 2100000, guid: 4be8a2e9cb50703449b665fd2258c5e9, type: 2}
+  - {fileID: 2100000, guid: 4be8a2e9cb50703449b665fd2258c5e9, type: 2}
+  - {fileID: 2100000, guid: 4be8a2e9cb50703449b665fd2258c5e9, type: 2}
+  - {fileID: 2100000, guid: 4be8a2e9cb50703449b665fd2258c5e9, type: 2}
+  - {fileID: 2100000, guid: 4be8a2e9cb50703449b665fd2258c5e9, type: 2}
+  - {fileID: 2100000, guid: 73c1c2c114cb82945853cf0bafb74db6, type: 2}
+  - {fileID: 2100000, guid: 4d292d250b7a4734ba8aa41b46d3f8af, type: 2}
+  allTextMeshes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
