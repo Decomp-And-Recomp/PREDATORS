@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: FalconerWristBlade
+  m_SubMeshes:
+  - firstByte: 0
+    indexCount: 15
+    isTriStrip: 2
+    triangleCount: 8
+    firstVertex: 0
+    vertexCount: 12
+    localAABB:
+      m_Center: {x: -0.5934306, y: 0.01440132, z: 0.007138595}
+      m_Extent: {x: 0.3449404, y: 0.014219131, z: 0.08028297}
+  m_MeshCompression: 0
+  m_IndexBuffer: 01000000070005000400020002000b000b000b0003000a00060009000800
+  m_Skin: []
+  m_BindPose: []
+  m_VertexData:
+    m_CurrentChannels: 63
+    m_VertexCount: 12
+    m_Streams[0]:
+      channelMask: 63
+      offset: 0
+      stride: 60
+      align: 16
+    m_Streams[1]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_Streams[2]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_Streams[3]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_DataSize: 720
+    _typelessdata: 26e786be3d0a3f39852b6dbc36c94cbdb6c579bf83935abeffffffff74ed563ffd61ee3ecebca44153cd90bf9d817f3fcaab27bd2d233fbd0000803f35747ebe141e183cb8cc95bd288476bd9fe37bbfa7112cbeffffffffd9cc563f1a96e63e4185a5416505fbbdcf837f3f00206abd97abbabc0000803f143970bf7bac9a3c140ab33d03892dbedd876fbf977a9ebefffffffff04e223ffd61ee3e00000000000000007da5733f9c3897bd7b8398be0000803f92f286be14d0ba3ccc4c73bcf55cfa3c573e7e3f852ce7bdffffffff10ee563ffd61ee3e0000000000000000fd8a7f3f6df713bd3ed742bd000080bf55d743bf85c7cc3cf5e0d4bc2dd4ddbd6d3673bffcdc95befffffffffe3d2b3f1a96e63e0000000000000000e3b27a3f282c52bdd28a48be0000803f82f349bfb88ec43b3353363ddc09afbd00ad74bf061990befffffffff6e82d3ffd61ee3e00000000000000001cbd7a3f75f1ebbca66b4cbe0000803f35f949bf7075ea3cb8ca343d85ecebbcb2957f3fd52a49bdffffffffbfea2d3ffd61ee3e000000000000000075807a3f5b7b943cf64452be000080bffe7c04bfe146ca3c663889bd1f6048bd529478bfec946fbeffffffff6b05413f1a96e63e787f694065057bbdbe4e7e3febf6bbbc025ce6bd0000803f143970bf7bac9a3c140ab33da3dbb4bd51257e3fbad2a6bdfffffffff04e223ffd61ee3e000000000000000015f5743f5b3b7d3db75891be000080bf55d743bf85c7cc3cf5e0d4bc1eec44bdc21c7f3f81138bbdfffffffffe3d2b3f1a96e63e000000000000000084807b3f2cf60e3d7dbd3bbe000080bffe7c04bfe146ca3c663889bd626e913cb1d77e3f331abfbdffffffff6b05413f1a96e63e787f694065057bbd03637e3f6488e4bc0b55debd000080bf35747ebe141e183cb8cc95bd59f1503d76c7793f82345abeffffffffd9cc563f1a96e63e4185a5416505fbbdcf837f3ffe1f6abd97abbabc000080bf
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Colors:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: -0.5934306, y: 0.01440132, z: 0.007138595}
+    m_Extent: {x: 0.3449404, y: 0.014219131, z: 0.08028297}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 1

@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: whip_retract
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.4678919, y: 0.40324557, z: 0.70021755, w: 0.35800216}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: -0.4678919, y: 0.40324557, z: 0.70021755, w: 0.35800216}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -6.123234E-17, y: -6.123234E-17, z: 6.123234E-17, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: -6.123234E-17, y: -6.123234E-17, z: 6.123234E-17, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base/Whip Center
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -6.123234E-17, y: -6.123234E-17, z: 6.123234E-17, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: -6.123234E-17, y: -6.123234E-17, z: 6.123234E-17, w: 1}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base/Whip Center/Whip Head
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.10054147, y: -0.02904848, z: 0.0043563293}
+        inSlope: {x: 1.2688456E-15, y: -1.1895429E-16, z: 2.9738572E-17}
+        outSlope: {x: -1.2688094E-15, y: -2.7755205E-16, z: 6.938801E-17}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: -0.10054147, y: -0.02904848, z: 0.0043563293}
+        inSlope: {x: 1.2688094E-15, y: -1.1895089E-16, z: 2.9737722E-17}
+        outSlope: {x: -1.2688094E-15, y: -2.7755205E-16, z: 6.938801E-17}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.052005164, y: -0.012654889, z: -0.013053402}
+        inSlope: {x: 0.00023415101, y: -0.0007313001, z: 5.1620125E-05}
+        outSlope: {x: 1.566732E-07, y: 2.2138241E-08, z: -1.702963E-08}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: 0.05200511, y: -0.012654796, z: -0.013053414}
+        inSlope: {x: -3.249261E-06, y: 5.6419294E-06, z: -6.9821647E-07}
+        outSlope: {x: -3.4468046E-06, y: 5.4086227E-06, z: -9.74097E-07}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base/Whip Center
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.033456855, y: 0.015665723, z: -0.009641024}
+        inSlope: {x: -0.0036779202, y: -0.00035301349, z: -0.00085520354}
+        outSlope: {x: -2.5544827E-07, y: 4.7682896E-08, z: 9.962331E-08}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: -0.03345596, y: 0.015665775, z: -0.009640949}
+        inSlope: {x: 5.3898904E-05, y: 3.1130237E-06, z: 4.612486E-06}
+        outSlope: {x: 5.35004E-05, y: 3.116429E-06, z: 4.495832E-06}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base/Whip Center/Whip Head
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.0000007, y: 1.0000004, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: 1.0000007, y: 1.0000004, z: 0.99999994}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.99999994, y: 1.0000001, z: 0.9999996}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: 0.99999994, y: 1.0000001, z: 0.9999996}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base/Whip Center
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.9999998, y: 0.99999994, z: 0.99999976}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 0.03333378
+        value: {x: 0.9999998, y: 0.99999994, z: 0.99999976}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path: Whip Base/Whip Center/Whip Head
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

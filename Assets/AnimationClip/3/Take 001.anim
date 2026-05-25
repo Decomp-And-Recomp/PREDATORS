@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Take 001
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      - time: 3.3333335
+        value: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+        inSlope: {x: 0, y: 0, z: 0, w: 0}
+        outSlope: {x: 0, y: 0, z: 0, w: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 0.08542608, y: 0.08542608, z: 0.08542608}
+        inSlope: {x: 0.0025805084, y: 0.0025805084, z: 0.0025805084}
+        outSlope: {x: 0.0025805084, y: 0.0025805084, z: 0.0025805084}
+        tangentMode: 0
+      - time: 1.2333333
+        value: {x: 0.1746946, y: 0.1746946, z: 0.1746946}
+        inSlope: {x: 0.12102027, y: 0.12102027, z: 0.12102027}
+        outSlope: {x: 0.12102027, y: 0.12102027, z: 0.12102027}
+        tangentMode: 0
+      - time: 2.8666668
+        value: {x: 0.35854322, y: 0.35854322, z: 0.35854322}
+        inSlope: {x: 0.06252235, y: 0.06252235, z: 0.06252235}
+        outSlope: {x: 0.06252235, y: 0.06252235, z: 0.06252235}
+        tangentMode: 0
+      - time: 3.3333335
+        value: {x: 0.3739293, y: 0.3739293, z: 0.3739293}
+        inSlope: {x: 0.0025811817, y: 0.0025811817, z: 0.0025811817}
+        outSlope: {x: 0.0025811817, y: 0.0025811817, z: 0.0025811817}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 10.943066, y: 10.943066, z: 2.60903E-06}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

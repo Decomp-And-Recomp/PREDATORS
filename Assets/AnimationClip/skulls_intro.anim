@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: skulls_intro
+  m_Compressed: 0
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.02112953, y: -0.09384984, z: -0.0056206603, w: 0.99534625}
+        inSlope: {x: -0.0017109698, y: -0.0036397574, z: -0.00024096573, w: -0.00038087365}
+        outSlope: {x: -0.0017109698, y: -0.0036397574, z: -0.00024096573, w: -0.00038087365}
+        tangentMode: 0
+      - time: 0.5666667
+        value: {x: -0.032420464, y: -0.070634484, z: -0.0069870017, w: 0.9969508}
+        inSlope: {x: -0.03486062, y: 0.1994408, z: -0.0036118948, w: 0.012927353}
+        outSlope: {x: -0.03486062, y: 0.1994408, z: -0.0036118948, w: 0.012927353}
+        tangentMode: 0
+      - time: 1.1333334
+        value: {x: -0.034299076, y: -0.022396771, z: -0.0066972063, w: 0.9991382}
+        inSlope: {x: 0.11317626, y: -0.28975922, z: 0.011975721, w: -0.002773405}
+        outSlope: {x: 0.11317626, y: -0.28975922, z: 0.011975721, w: -0.002773405}
+        tangentMode: 0
+      - time: 1.4666667
+        value: {x: 5.9608096E-10, y: -0.11131076, z: -5.321827E-09, w: 0.9937857}
+        inSlope: {x: 0.009165575, y: -0.02411744, z: 0.0026376948, w: -0.0026786353}
+        outSlope: {x: 0.009165575, y: -0.02411744, z: 0.0026376948, w: -0.0026786353}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_CompressedRotationCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: -0.068714015, y: 0.11630403, z: 1.0230957}
+        inSlope: {x: 3.961871E-10, y: 3.4062566E-07, z: -1.2097968E-05}
+        outSlope: {x: 3.961871E-10, y: 3.4062566E-07, z: -1.2097968E-05}
+        tangentMode: 0
+      - time: 0.33333334
+        value: {x: -0.07259934, y: 0.11508865, z: 1.0204673}
+        inSlope: {x: 3.9618764E-10, y: -0.008724621, z: -0.017795669}
+        outSlope: {x: 1.5740745E-06, y: -0.0087249875, z: -0.017791696}
+        tangentMode: 0
+      - time: 0.53333336
+        value: {x: 0.00030470372, y: 0.11165139, z: 0.73387206}
+        inSlope: {x: 2.036328E-06, y: -5.5779253E-07, z: -1.5770088}
+        outSlope: {x: -5.580796E-07, y: -2.8954292E-07, z: -1.5770129}
+        tangentMode: 0
+      - time: 0.73333335
+        value: {x: -0.017689763, y: 0.12424188, z: 0.38965988}
+        inSlope: {x: -4.51484E-07, y: -2.8954344E-07, z: -1.4532473}
+        outSlope: {x: 5.3396995E-08, y: -2.1102828E-06, z: -1.4532461}
+        tangentMode: 0
+      - time: 1
+        value: {x: 0.0109603545, y: 0.11313371, z: 0.05569002}
+        inSlope: {x: 2.3987468E-07, y: -0.023966808, z: -0.7879849}
+        outSlope: {x: 2.8558912E-07, y: -0.02396495, z: -0.78797734}
+        tangentMode: 0
+      - time: 1.1666667
+        value: {x: -0.009716324, y: 0.10959758, z: -0.069678284}
+        inSlope: {x: -0.2093135, y: -0.017990004, z: -0.6836658}
+        outSlope: {x: -0.20931236, y: -0.017990563, z: -0.68366194}
+        tangentMode: 0
+      - time: 1.4666667
+        value: {x: -0.059954, y: 0.106665894, z: -0.1881959}
+        inSlope: {x: 4.1246298E-07, y: 1.1718065E-06, z: 2.2451114E-07}
+        outSlope: {x: -0, y: 1.1102241E-15, z: -1.9032413E-15}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: {x: 1.0000005, y: 1.000001, z: 0.9999999}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - time: 1.4666667
+        value: {x: 1.0000005, y: 1.000001, z: 0.9999999}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    path:
+  m_FloatCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0.051703364, y: -0.009775847, z: -0.0005608201}
+    m_Extent: {x: 0.30414817, y: 0.09628765, z: 1.2098057}
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []

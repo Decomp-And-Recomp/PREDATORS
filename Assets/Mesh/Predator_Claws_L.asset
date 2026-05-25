@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Predator_Claws_L
+  m_SubMeshes:
+  - firstByte: 0
+    indexCount: 34
+    isTriStrip: 2
+    triangleCount: 16
+    firstVertex: 0
+    vertexCount: 24
+    localAABB:
+      m_Center: {x: -0.55607706, y: -0.003080368, z: 0.022927132}
+      m_Extent: {x: 0.31137475, y: 0.045086365, z: 0.07104732}
+  m_MeshCompression: 0
+  m_IndexBuffer: 0e000e000a00040001000200000000001600160016000b00120003001100100010000f000f000f000c00090006000700050005001700170017000d001500080014001300
+  m_Skin: []
+  m_BindPose: []
+  m_VertexData:
+    m_CurrentChannels: 63
+    m_VertexCount: 24
+    m_Streams[0]:
+      channelMask: 63
+      offset: 0
+      stride: 60
+      align: 16
+    m_Streams[1]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_Streams[2]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_Streams[3]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_DataSize: 1440
+    _typelessdata: 52115ebfd7790fbd47072fbdca5ef6bd4a047cbf6228033effffffff9533213fcbb7ee3ecebca4c1000000002fa7753fcf6ea8bd24cd893e000080bfd09a37bf7b4a45bd295c2abbf29455bd73157cbf17402a3effffffff66f72c3fcbb7ee3eeb2337c153cd90bf3c7d7c3f8d21cabc891b273e000080bf444443bfa4b611bd2986523dc70798bd0bb47bbffea82a3effffffffd2422a3f5b10e63ec64a56c100000000e0b2793f71b016bd19a25e3e000080bf649e37bfa444d1bc1f850ebba63436bdbbe77d3f9713f53dffffffff36f92c3fcbb7ee3eeb2337c153cd903f51817c3f3177c93ce4bb263e0000803f9f4105bf3d8809bdae75c03df01180bc40067cbfcd0c333effffffffae58403f5b10e63e787f694065057bbd36907f3fc736b5bbaa0f6e3d000080bff2965dbf141c033dae1945bdf65ef6bd42047cbf1729033effffffff9533213fcbb7ee3e00000000000000002ca7753f8b6ea8bd3ccd893e000080bf722037bf0a979a3c52e002bc869555bd6f157cbf6d402a3effffffff66f72c3fcbb7ee3e00000000000000003b7d7c3f2522cabca01b273e000080bfe5c942bf85df003dc2733c3d370898bd03b47bbf99a92a3effffffffd2422a3f5b10e63e0000000000000000deb2793fb3b016bd39a25e3e000080bf042437bf99f3293d1ed5f7bbec3336bdbfe77d3f8e12f53dffffffff36f92c3fcbb7ee3e000000000000000051817c3f5d76c93cf0bb263e0000803f3fc704bfae0d093d856cb53d6d1280bc3e067cbf020d333effffffffae58403f5b10e63e787f694065057bbd36907f3f5138b5bbb40f6e3d000080bf6a7986be852f43bdeb6db73c2a8a1bbcdbb17cbfc6ba233effffffff9a8f563fcbb7ee3ecebca44153cd90bf25ef7f3f04784fbcf5229abc000080bf958086be0a0fcdbccde8ba3c2954383cc0b67c3fbd23233effffffff3a90563fcbb7ee3ecebca44153cd903fa4f27f3f442f0abcb94496bc0000803fab8485bef6cc9e3c70498b3cd8881bbcdbb17cbfd6ba233effffffff9a8f563fcbb7ee3ecebca44153cd90bf25ef7f3faa764fbcdc229abc000080bfd08b85be7b0e2c3d00c48e3c9052383cc0b67c3fa123233effffffff3a90563fcbb7ee3e0000000000000000a4f27f3fab2d0abcc54496bc0000803fb37c7cbe527e1ebdcd77a53d628634bc6fe87cbf80451e3effffffff8a6e563f5b10e63e4185a5416505fbbde8a87f3fb2d198bcd4c844bd000080bf3d937abe852fe83ca46e9a3dcd8334bc6ce87cbfd6451e3effffffff8a6e563f5b10e63e4185a5416505fbbde8a87f3f89d098bcdbc844bd000080bf52115ebfd7790fbd47072fbda480bbbdda6e7d3ffe4edc3dffffffff9533213fcbb7ee3ecebca4c1000000007a2b763fc20a753de823893e0000803f444443bfa4b611bd2986523d240a82bd6a437d3fea6d063effffffffd2422a3f5b10e63ec64a56c1000000007dd0793f4a390b3d82045d3e0000803f9f4105bf3d8809bdae75c03d68248dbbc6c97c3f4da3213effffffffae58403f5b10e63e787f694065057bbdc9977f3f129597bb761f663d0000803ff2965dbf141c033dae1945bd3380bbbde26e7d3f334ddc3dffffffff9533213fcbb7ee3e0000000000000000782b763fce0a753df223893e0000803fe5c942bf85df003dc2733c3d8e0982bd74437d3f1a6d063effffffffd2422a3f5b10e63e00000000000000007cd0793fc9380b3d95045d3e0000803f3fc704bfae0d093d856cb53d9f228dbbc8c97c3ffca2213effffffffae58403f5b10e63e787f694065057bbdc9977f3f3f9697bb6e1f663d0000803fb37c7cbe527e1ebdcd77a53d7581ec3caf85793f4afb623effffffff8a6e563f5b10e63e4185a5416505fbbde8a87f3fb3d198bcd4c844bd0000803f3d937abe852fe83ca46e9a3d3b80ec3cb585793ffbfa623effffffff8a6e563f5b10e63e4185a5416505fbbde8a87f3f8ad098bcdbc844bd0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Colors:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: -0.55607706, y: -0.003080368, z: 0.022927132}
+    m_Extent: {x: 0.31137475, y: 0.045086365, z: 0.07104732}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 1

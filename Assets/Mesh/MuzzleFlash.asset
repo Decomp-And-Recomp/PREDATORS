@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!43 &4300000
+Mesh:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MuzzleFlash
+  m_SubMeshes:
+  - firstByte: 0
+    indexCount: 22
+    isTriStrip: 2
+    triangleCount: 8
+    firstVertex: 0
+    vertexCount: 16
+    localAABB:
+      m_Center: {x: 0, y: 0.6448792, z: 0.052844703}
+      m_Extent: {x: 0.7155787, y: 0.6668941, z: 0.74420005}
+  m_MeshCompression: 0
+  m_IndexBuffer: 020003000000010001000600060007000400050005000900090008000b000a000a000d000d000c000f000e00
+  m_Skin: []
+  m_BindPose: []
+  m_VertexData:
+    m_CurrentChannels: 59
+    m_VertexCount: 16
+    m_Streams[0]:
+      channelMask: 59
+      offset: 0
+      stride: 56
+      align: 16
+    m_Streams[1]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_Streams[2]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_Streams[3]:
+      channelMask: 0
+      offset: 0
+      stride: 0
+      align: 16
+    m_DataSize: 896
+    _typelessdata: 8486833e2fe8a73f368b833eef0435bf00000000f704353f0f3d013fd8862b3b9bb7823e4f2b413feb8fafb3000080bfe48fafb3000080bf8386833e8f58b4bc2f8b833eef0435bf00000000f704353fdfd87b3fd8862b3b011ffe3e4f2b413f3fefbfb3000080bf37efbfb3000080bfe28f83be30e8a73f248b83beef0435bf00000000f704353f0f3d013f4cfc753e9bb7823e0000803f56f1a7b3000080bf50f1a7b3000080bfe28f83be3d58b4bc2b8b83beef0435bf00000000f704353fdfd87b3f4cfc753e011ffe3e0000803faa50b8b3000080bfa250b8b3000080bf7f86833e30e8a73f2b8b83bef604353f00000000f004353f0f3d013fd8862b3b9bb7823e4f2b413f04929733000080bf0a9297b3000080bf7f86833e3d58b4bc328b83bef504353f00000000f004353fdfd87b3fd8862b3b011ffe3e4f2b413f55f1a733000080bf5df1a7b3000080bfdb8f83be2fe8a73f398b833ef604353f00000000ef04353f0f3d013f4cfc753e9bb7823e0000803f6ef38f33000080bf77f38fb3000080bfdc8f83be8f58b4bc328b833ef604353f00000000f004353fdfd87b3f4cfc753e011ffe3e0000803fc152a033000080bfc852a0b3000080bf2a3037bf7d36ad33aafc30bf000000000000803f0000000012aa433fc310893e000034c220e82dc20000803f000000000664c3b8000080bf2a30373f876d11b4aafc30bf000000000000803f000000003a407b3f810e893e0000344221e82dc20000803f00000000f192a938000080bf2a3037bf05c71934200b4c3f000000000000803f00000000f3a8433f6976fa3e000034c20b7e4842ffff7f3f0000000079c290b9000080bf2a30373f82839cb3200b4c3f000000000000803f0000000018447b3f1e7efa3e000034420c7e48420000803f00000000a013d6b8000080bf2a30373f8a0a1733aafc30bf00000000000080bf0000000012aa433fc310893e000034c220e82dc2000080bf000000000664c3b8000080bf2a3037bf8a0a1733aafc30bf00000000000080bf000000003a407b3f810e893e0000344221e82dc2000080bf00000000f192a938000080bf2a30373f2349ebb2200b4c3f00000000000080bf00000000f3a8433f6976fa3e000034c20b7e4842ffff7fbf0000000079c290b9000080bf2a3037bf2349ebb2200b4c3f00000000000080bf0000000018447b3f1e7efa3e000034420c7e4842000080bf00000000a013d6b8000080bf
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_BindPoses:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data:
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+    m_Colors:
+      m_NumItems: 0
+      m_Data:
+      m_BitSize: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0.6448792, z: 0.052844703}
+    m_Extent: {x: 0.7155787, y: 0.6668941, z: 0.74420005}
+  m_MeshUsageFlags: 0
+  m_MeshOptimized: 1
