@@ -20,15 +20,13 @@ public class GooglePlayDownloader
 		{
 			return;
 		}
-		Environment = new AndroidJavaClass("android.os.Environment");
-		using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.plugin.downloader.UnityDownloaderService"))
+		try
 		{
-			androidJavaClass.SetStatic("BASE64_PUBLIC_KEY", "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2BYwqLSdC9RFsukxPI34W1Cozwy4QLtmcaU29iIacqtc53oz9ZsK4hdVA+NeL66mC8E+aKNNCkgSGQ3oD3RVRo1LzI90OD/LVKQ5Q5C0rn+pfgYywjIgtGArpQG5RW9sCiyXy8lturS5W4EZN+/6NGzF4K0njlUaAOuW2L/NbIkNzTwxGdE9fJTzHxTzz20r/X3zwT7QmGZqWHlZWNzMq+Uo2R0REcVlokovSiBecVBi3yaa1B3YepfTksv/r/rQKQmd19pk2QQz8JpX/YVZOi7jf2BV7FnDJribCykYm7Nkx47KPH+nI+3jYYbJUf+sTgOHVHEA0eu2hs6rzxP2GwIDAQAB");
-			androidJavaClass.SetStatic("SALT", new byte[20]
-			{
-				1, 43, 244, 255, 54, 98, 156, 244, 43, 2,
-				248, 252, 9, 5, 150, 148, 223, 45, 255, 84
-			});
+			Environment = new AndroidJavaClass("android.os.Environment");
+		}
+		catch (Exception ex)
+		{
+			Environment = null;
 		}
 	}
 
@@ -36,76 +34,89 @@ public class GooglePlayDownloader
 	{
 		if (detectAndroidJNI == null)
 		{
-			detectAndroidJNI = new AndroidJavaClass("android.os.Build");
+			try
+			{
+				detectAndroidJNI = new AndroidJavaClass("android.os.Build");
+			}
+			catch
+			{
+				return false;
+			}
 		}
-		return detectAndroidJNI.GetRawClass() != IntPtr.Zero;
+		return detectAndroidJNI != null && detectAndroidJNI.GetRawClass() != IntPtr.Zero;
 	}
 
 	public static string GetExpansionFilePath()
 	{
-		populateOBBData();
-		if (Environment.CallStatic<string>("getExternalStorageState", new object[0]) != "mounted")
+		if (Environment == null)
 		{
 			return null;
 		}
-		using (AndroidJavaObject androidJavaObject = Environment.CallStatic<AndroidJavaObject>("getExternalStorageDirectory", new object[0]))
+		try
 		{
-			string arg = androidJavaObject.Call<string>("getPath", new object[0]);
-			return string.Format("{0}/{1}/{2}", arg, "Android/obb", obb_package);
+			populateOBBData();
+			if (Environment.CallStatic<string>("getExternalStorageState", new object[0]) != "mounted")
+			{
+				return null;
+			}
+			using (AndroidJavaObject androidJavaObject = Environment.CallStatic<AndroidJavaObject>("getExternalStorageDirectory", new object[0]))
+			{
+				string arg = androidJavaObject.Call<string>("getPath", new object[0]);
+				return string.Format("{0}/{1}/{2}", arg, "Android/obb", obb_package);
+			}
+		}
+		catch (Exception ex)
+		{
+			return null;
 		}
 	}
 
 	public static string GetMainOBBPath(string expansionFilePath)
 	{
-		populateOBBData();
 		if (expansionFilePath == null)
 		{
 			return null;
 		}
-		string text = string.Format("{0}/main.{1}.{2}.obb", expansionFilePath, obb_version, obb_package);
-		if (!File.Exists(text))
+		try
+		{
+			populateOBBData();
+			string text = string.Format("{0}/main.{1}.{2}.obb", expansionFilePath, obb_version, obb_package);
+			if (!File.Exists(text))
+			{
+				return null;
+			}
+			return text;
+		}
+		catch
 		{
 			return null;
 		}
-		return text;
 	}
 
 	public static string GetPatchOBBPath(string expansionFilePath)
 	{
-		populateOBBData();
 		if (expansionFilePath == null)
 		{
 			return null;
 		}
-		string text = string.Format("{0}/patch.{1}.{2}.obb", expansionFilePath, obb_version, obb_package);
-		if (!File.Exists(text))
+		try
+		{
+			populateOBBData();
+			string text = string.Format("{0}/patch.{1}.{2}.obb", expansionFilePath, obb_version, obb_package);
+			if (!File.Exists(text))
+			{
+				return null;
+			}
+			return text;
+		}
+		catch
 		{
 			return null;
 		}
-		return text;
 	}
 
 	public static void FetchOBB()
 	{
-		using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
-		{
-			AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
-			AndroidJavaObject androidJavaObject = new AndroidJavaObject("android.content.Intent", @static, new AndroidJavaClass("com.unity3d.plugin.downloader.UnityDownloaderActivity"));
-			int num = 65536;
-			androidJavaObject.Call<AndroidJavaObject>("addFlags", new object[1] { num });
-			androidJavaObject.Call<AndroidJavaObject>("putExtra", new object[2]
-			{
-				"unityplayer.Activity",
-				@static.Call<AndroidJavaObject>("getClass", new object[0]).Call<string>("getName", new object[0])
-			});
-			@static.Call("startActivity", androidJavaObject);
-			if (AndroidJNI.ExceptionOccurred() != IntPtr.Zero)
-			{
-				Debug.LogError("Exception occurred while attempting to start DownloaderActivity - is the AndroidManifest.xml incorrect?");
-				AndroidJNI.ExceptionDescribe();
-				AndroidJNI.ExceptionClear();
-			}
-		}
 	}
 
 	private static void populateOBBData()
@@ -114,12 +125,19 @@ public class GooglePlayDownloader
 		{
 			return;
 		}
-		using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+		try
 		{
-			AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
-			obb_package = @static.Call<string>("getPackageName", new object[0]);
-			AndroidJavaObject androidJavaObject = @static.Call<AndroidJavaObject>("getPackageManager", new object[0]).Call<AndroidJavaObject>("getPackageInfo", new object[2] { obb_package, 0 });
-			obb_version = androidJavaObject.Get<int>("versionCode");
+			using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+			{
+				AndroidJavaObject @static = androidJavaClass.GetStatic<AndroidJavaObject>("currentActivity");
+				obb_package = @static.Call<string>("getPackageName", new object[0]);
+				AndroidJavaObject androidJavaObject = @static.Call<AndroidJavaObject>("getPackageManager", new object[0]).Call<AndroidJavaObject>("getPackageInfo", new object[2] { obb_package, 0 });
+				obb_version = androidJavaObject.Get<int>("versionCode");
+			}
+		}
+		catch (Exception ex)
+		{
+			Debug.LogWarning("[GooglePlayDownloader] populateOBBData failed: " + ex.Message);
 		}
 	}
 }

@@ -20,7 +20,7 @@ public class LoadOBBFiles : MonoBehaviour
 #if UNITY_EDITOR || UNITY_STANDALONE
         MonoBehaviour.print("PC/Editor: OBB integration skipped (SplashScreen owns boot transition).");
 #else
-        VerifyAndIntegrateOBBFiles();
+        PlayMovieLoadMenu();
 #endif
     }
 
