@@ -912,8 +912,11 @@ public class MainMenuPredator : MonoBehaviour
 		};
 		buttonQuitConfirm.onPressBegin += delegate
 		{
-			FlurryManager.Instance.Close();
+#if !UNITY_EDITOR
 			Application.Quit();
+#else
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
 		};
 		buttonQuitCancel.onPressBegin += delegate
 		{
