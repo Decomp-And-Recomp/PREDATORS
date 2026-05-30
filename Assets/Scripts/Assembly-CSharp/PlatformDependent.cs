@@ -287,7 +287,7 @@ public static class PlatformDependent
 
 	public static void DismissCrystalUI()
 	{
-		CrystalUnityBasic.Instance.DeactivateUi();
+		//CrystalUnityBasic.Instance.DeactivateUi();
 	}
 
 	internal static void HandleCrystalAndFoxButtons(Collider mainMenuCrystalButton, Collider hitCollider, AudioSource audio, bool sfxOn, AudioClip soundMenuClick, bool liteVersion)
@@ -304,7 +304,7 @@ public static class PlatformDependent
 			}
 			else
 			{
-				CrystalUnityBasic.Instance.ActivateUi();
+				//CrystalUnityBasic.Instance.ActivateUi();
 			}
 		}
 	}

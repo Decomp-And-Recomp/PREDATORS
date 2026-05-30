@@ -247,7 +247,7 @@ public class CrystalUnityBasic : MonoBehaviour
 
 	private bool isOkToRun()
 	{
-		return false;
+		return true;
 	}
 
 	public void Start()

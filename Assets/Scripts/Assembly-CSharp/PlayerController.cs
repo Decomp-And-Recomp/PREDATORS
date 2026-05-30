@@ -2241,7 +2241,7 @@ public class PlayerController : MonoBehaviour
 		}
 		if (Time.timeSinceLevelLoad - thermalVisionUsageTime > 120f && !liteVersion)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419966142", true, "Night Stalker", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419966142", true, "Night Stalker", false);
 		}
 		StartCoroutine(SlidePanel(GUI_ThermalFade, ThermalFadeLeftPosition, ThermalFadeRightPosition, 0.3f));
 		base.GetComponent<AudioSource>().clip = soundVisionModeLoop;
@@ -2870,7 +2870,7 @@ public class PlayerController : MonoBehaviour
 			}
 			if (peopleKilledByDisk > 3 && !liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419953296", true, "Tornado", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419953296", true, "Tornado", false);
 			}
 		}
 	}
@@ -7729,7 +7729,7 @@ public class PlayerController : MonoBehaviour
 		}
 		if (!liteVersion)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419918554", true, "Clan Leader", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419918554", true, "Clan Leader", false);
 		}
 		float fadeTime = 4f;
 		float timer = fadeTime;

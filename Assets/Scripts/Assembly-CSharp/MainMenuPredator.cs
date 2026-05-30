@@ -740,8 +740,8 @@ public class MainMenuPredator : MonoBehaviour
 		PlatformDependent.HideMouseCursor(mouseCursor);
 		PlatformDependent.SetPositionForGuerrilaBob(extrasGuerrillaButton, extrasHelsingsFireButton);
 		PlatformDependent.HandleIphoneKeyboard();
-		CrystalUnityBasic.Instance.ActivateCrystalSetting(CrystalUnityBasic.CrystalSetting.CrystalSettingEnableGameCenterSupport, "YES");
-		CrystalUnityBasic.Instance.AuthenticateLocalPlayer();
+		//CrystalUnityBasic.Instance.ActivateCrystalSetting(CrystalUnityBasic.CrystalSetting.CrystalSettingEnableGameCenterSupport, "YES");
+		//CrystalUnityBasic.Instance.AuthenticateLocalPlayer();
 		LoadResourcesTextures();
 		if ((bool)RRPresentsLogo)
 		{

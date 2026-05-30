@@ -647,7 +647,7 @@ public class SurvivalMissionController : MonoBehaviour
 		}
 		if (!playerController.liteVersion)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("765304491", true, "Black Death", false);
+			//CrystalUnityBasic.Instance.PostAchievement("765304491", true, "Black Death", false);
 		}
 		missionCompleted = EndMissionCondition(currentMission);
 	}
@@ -663,7 +663,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419982032", true, "Elite", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419982032", true, "Elite", false);
 			}
 			royceTrophyCount++;
 		}
@@ -681,7 +681,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419956371", true, "Deadeye", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419956371", true, "Deadeye", false);
 			}
 			isabeleTrophyCount++;
 		}
@@ -699,7 +699,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419915964", true, "Assasin", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419915964", true, "Assasin", false);
 			}
 			hanzoTrophyCount++;
 		}
@@ -717,7 +717,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419938467", true, "Firepower", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419938467", true, "Firepower", false);
 			}
 			nikolaiTrophyCount++;
 		}
@@ -751,7 +751,7 @@ public class SurvivalMissionController : MonoBehaviour
 		}
 		if (!playerController.liteVersion)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("765290755", true, "Winged Death", false);
+			//CrystalUnityBasic.Instance.PostAchievement("765290755", true, "Winged Death", false);
 		}
 		missionCompleted = EndMissionCondition(currentMission);
 	}
@@ -769,7 +769,7 @@ public class SurvivalMissionController : MonoBehaviour
 		}
 		if (!playerController.liteVersion)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("765314469", true, "Flusher", false);
+			//CrystalUnityBasic.Instance.PostAchievement("765314469", true, "Flusher", false);
 		}
 		missionCompleted = EndMissionCondition(currentMission);
 	}
@@ -805,7 +805,7 @@ public class SurvivalMissionController : MonoBehaviour
 			killsWhipOneWhipe++;
 			if (killsWhipOneWhipe >= 4 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("765281649", true, "The Chopper", false);
+				//CrystalUnityBasic.Instance.PostAchievement("765281649", true, "The Chopper", false);
 			}
 			StartCoroutine(ResetWhipKillsOneWhipeCount());
 			break;
@@ -828,7 +828,7 @@ public class SurvivalMissionController : MonoBehaviour
 			verticalSplitKillsDone++;
 			if (verticalSplitKillsDone == 20 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("765290496", true, "Banana Split", false);
+				//CrystalUnityBasic.Instance.PostAchievement("765290496", true, "Banana Split", false);
 			}
 			num = 2;
 			if (AManager.PredatorInvisible)
@@ -855,7 +855,7 @@ public class SurvivalMissionController : MonoBehaviour
 		case DeathType.TrophyKill:
 			if (AManager.PredatorInvisible && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419951172", true, "Death Shadow", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419951172", true, "Death Shadow", false);
 			}
 			num = 6;
 			break;
@@ -872,7 +872,7 @@ public class SurvivalMissionController : MonoBehaviour
 			superSliceKillsDone++;
 			if (superSliceKillsDone == 3 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419891936", true, "Reap the Whirlwind", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419891936", true, "Reap the Whirlwind", false);
 			}
 			BodiesSplit++;
 			doubleDiskKillsDone++;
@@ -901,7 +901,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419926836", true, "Merciless", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419926836", true, "Merciless", false);
 			}
 			cuchilloTrophyCount++;
 		}
@@ -919,7 +919,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419958342", true, "Executioner", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419958342", true, "Executioner", false);
 			}
 			stansTrophyCount++;
 		}
@@ -937,7 +937,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419974236", true, "Evader", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419974236", true, "Evader", false);
 			}
 			nolanTrophyCount++;
 		}
@@ -997,7 +997,7 @@ public class SurvivalMissionController : MonoBehaviour
 		{
 			if (playerController.CurrentMission != 34 && !playerController.liteVersion)
 			{
-				CrystalUnityBasic.Instance.PostAchievement("419968247", true, "Ruthless", false);
+				//CrystalUnityBasic.Instance.PostAchievement("419968247", true, "Ruthless", false);
 			}
 			mombasaTrophyCount++;
 		}

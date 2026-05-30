@@ -678,11 +678,11 @@ public class MissionSelect : MonoBehaviour
 		InitText();
 		if (maxLevelUnlocked == 31)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419889911", true, "Ultimate Predator", false);
+			/*CrystalUnityBasic.Instance.PostAchievement("419889911", true, "Ultimate Predator", false);
 			if (EncryptedPlayerPrefs.GetInt("PR_PredatorDeaths_S" + slot, 5) == 0)
 			{
 				CrystalUnityBasic.Instance.PostAchievement("419963137", true, "Invincible", false);
-			}
+			}*/
 		}
 		ShowCampaignMissions();
 		missionSquaresCampaign[0].transform.parent = EZmover.transform;
@@ -1537,21 +1537,21 @@ public class MissionSelect : MonoBehaviour
 		int num3 = EncryptedPlayerPrefs.GetInt("PR_WristLevel_S" + currentSlot, 0) + EncryptedPlayerPrefs.GetInt("PR_SpearLevel_S" + currentSlot, 0) + EncryptedPlayerPrefs.GetInt("PR_DiskLevel_S" + currentSlot, 0) + EncryptedPlayerPrefs.GetInt("PR_NetGunLevel_S" + currentSlot, 0) + EncryptedPlayerPrefs.GetInt("PR_PlasmaGunLevel_S" + currentSlot, 0) + EncryptedPlayerPrefs.GetInt("PR_WhipLevel_S" + currentSlot, 0);
 		if (num3 == 15)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419972038", true, "Armory", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419972038", true, "Armory", false);
 		}
 		int int10 = EncryptedPlayerPrefs.GetInt("PR_BodiesSplit_S" + slot, 0);
 		if (int10 > 100)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419939333", true, "Butcher", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419939333", true, "Butcher", false);
 		}
 		if (num > 100)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419930443", true, "Head Hunter", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419930443", true, "Head Hunter", false);
 		}
 		int int11 = EncryptedPlayerPrefs.GetInt("PR_NetGunCaptures_S" + currentSlot, 0);
 		if (int11 > 50)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419932462", true, "Trapper", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419932462", true, "Trapper", false);
 		}
 		stats1TextValues.text = EncryptedPlayerPrefs.GetInt("PR_LastMissionUnlocked_S" + EncryptedPlayerPrefs.GetInt("PR_CurrentSlot", 0), 0) + "/31\n" + num3 + "/18\n" + num2 + "/4\n" + availableHonorPoints + "\n" + num + "\n" + EncryptedPlayerPrefs.GetInt("PR_StealthKills_S" + currentSlot, 0);
 		stats2TextValues.text = EncryptedPlayerPrefs.GetInt("PR_OponentsImpaled_S" + slot, 0) + "\n" + int10.ToString() + "\n" + EncryptedPlayerPrefs.GetInt("PR_VerticalSplits_S" + slot, 0) + "\n" + EncryptedPlayerPrefs.GetFloat("PR_LongestSurvivalTime_S" + slot, 0f).TimeFormat() + "\n" + EncryptedPlayerPrefs.GetInt("PR_PredatorDeaths_S" + slot, 0) + "\n" + int11.ToString() + "\n" + EncryptedPlayerPrefs.GetInt("PR_MaxDiskCombo_S" + currentSlot, 0);
@@ -2499,7 +2499,7 @@ public class MissionSelect : MonoBehaviour
 		int int6 = EncryptedPlayerPrefs.GetInt(key2, 0);
 		if (num10 > 0 && num11 > 0 && num12 > 0 && num13 > 0 && num14 > 0 && num15 > 0 && num16 > 0 && num17 > 0 && int4 > 0 && int5 > 0 && int6 > 0)
 		{
-			CrystalUnityBasic.Instance.PostAchievement("419683035", true, "Skull Collector", false);
+			//CrystalUnityBasic.Instance.PostAchievement("419683035", true, "Skull Collector", false);
 		}
 		blackPredatorsStatsKilled.text = @int.ToString();
 		berserkersStatsKilled.text = int2.ToString();
